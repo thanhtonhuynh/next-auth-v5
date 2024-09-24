@@ -27,7 +27,7 @@ export default function SettingsPage({ user }: SettingsPageProps) {
   const { toast } = useToast();
 
   // For when making navbar and userbutton client session
-  const session = useSession();
+  // const session = useSession();
 
   const form = useForm<UpdateProfileValues>({
     resolver: zodResolver(updateProfileSchema),
@@ -38,7 +38,7 @@ export default function SettingsPage({ user }: SettingsPageProps) {
     try {
       await updateProfile(data);
       toast({ description: "Profile updated." });
-      session.update();
+      // session.update();
     } catch (error) {
       toast({
         variant: "destructive",

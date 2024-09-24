@@ -36,12 +36,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SessionProvider>
-          {/* <NavBar /> */}
-          <NavBarClient />
-          {children}
-          <Toaster />
-        </SessionProvider>
+        {/* For client-side session */}
+        {/* <SessionProvider> */}
+        <NavBar />
+        {/* <NavBarClient /> */}
+        {children}
+        <Toaster />
+        {/* </SessionProvider> */}
       </body>
     </html>
   );
